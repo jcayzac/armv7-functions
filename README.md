@@ -17,4 +17,10 @@ Compilation flags
 
 For best performance I usually use the following CFLAGS: <code>-mthumb -mcpu=cortex-a8 -mfpu=neon -mfloat-abi=softfp -mvectorize-with-neon-quad -O3 -ffast-math -fomit-frame-pointer -fstrict-aliasing -fgcse-las -funsafe-loop-optimizations -fsee -ftree-vectorize</code>, with <code>-arch armv7</code> if it's _gcc for iOS_ or <code>-march=armv7-a</code> if it's _eabi-none-gcc_.
 
+Preprocessor macros
+-------------------
+
+These preprocessor macros, when defined, change the behaviour of the code:
+
+* __QUICK_AND_DIRTY_NORMALIZATION__: only use a very rough approximation when normalizing quantities.
 
