@@ -20,7 +20,5 @@ For best performance I usually use the following CFLAGS: <code>-mthumb -mcpu=cor
 Preprocessor macros
 -------------------
 
-These preprocessor macros, when defined, change the behaviour of the code:
-
-* __QUICK_AND_DIRTY_NORMALIZATION__: only use a very rough approximation when normalizing quantities.
+Several preprocessor macros, when defined, change the behaviour of the code. See <code>config.h</code> and <code>config-defaults.h</code> for details…
 
