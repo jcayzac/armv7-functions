@@ -1,5 +1,8 @@
 #pragma once
 
+#include <armv7-functions/config.h>
+#include <armv7-functions/config-defaults.h>
+
 // A few sanity checks
 #ifndef __FAST_MATH__
 	#error "Please add -ffast-math to your compile flags"
@@ -16,4 +19,5 @@
 #define ARMV7_FUNC_API static inline __attribute__((always_inline))
 #define ARMV7_FUNC_PI  0x1.921FB54442D18p1f
 #define ARMV7_FUNC_2PI 0x1.921FB54442D18p2f
+
 
