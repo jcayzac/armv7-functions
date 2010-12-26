@@ -9,3 +9,5 @@
 #include <armv7-functions/vectormath/vec4_homogenize.h>
 #include <armv7-functions/vectormath/vec4_reciprocal.h>
 
+//#include <armv7-functions/vectormath/vector3.h>
+
