@@ -6,7 +6,7 @@
 #endif
 
 #ifndef __ARM_NEON__
-	#error "Please add -ffpu=neon to your compile flags"
+	#error "Please add -mfpu=neon to your compile flags"
 #endif
 
 // Most needed header
