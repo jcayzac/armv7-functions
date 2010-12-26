@@ -1,9 +1,11 @@
 #pragma once
 #include <armv7-functions/common.h>
 
+namespace ARM7_FUNC_NAMESPACE {
+
 // Compute the dot product of two vectors of 4n floats
-ARMV7_FUNC_API void vec4n_dot(float& result, const float32x4_t* a, const float32x4_t* b, unsigned int n) {
-	register float32x4_t tmp, va, vb;
+ARMV7_FUNC_API void vec4n_dot(float& result, const vector4_t* a, const vector4_t* b, unsigned int n) {
+	register vector4_t tmp, va, vb;
 	asm volatile (
 	"# %q[tmp].x = dot(%q[va][i], %q[vb][i]) for (i=0; i<n; i++);\n\t"
 	"vmov.f32 %q[tmp], #0.0\n\t"
@@ -21,4 +23,6 @@ ARMV7_FUNC_API void vec4n_dot(float& result, const float32x4_t* a, const float32
 	);
 	result = vgetq_lane_f32(tmp, 0);
 }
+
+} // ARM7_FUNC_NAMESPACE
 

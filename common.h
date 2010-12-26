@@ -20,4 +20,10 @@
 #define ARMV7_FUNC_PI  0x1.921FB54442D18p1f
 #define ARMV7_FUNC_2PI 0x1.921FB54442D18p2f
 
+// Standard types
+namespace ARM7_FUNC_NAMESPACE {
+	typedef float32x4_t   vector3_t;
+	typedef float32x4_t   vector4_t;
+	typedef float32x4x4_t matrix44_t;
+}
 

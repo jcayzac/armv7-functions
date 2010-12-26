@@ -1,7 +1,9 @@
 #pragma once
 #include <armv7-functions/common.h>
 
-ARMV7_FUNC_API void mat44_multiply(float32x4x4_t& result, const float32x4x4_t& a, const float32x4x4_t& b) {
+namespace ARM7_FUNC_NAMESPACE {
+
+ARMV7_FUNC_API void mat44_multiply(matrix44_t& result, const matrix44_t& a, const matrix44_t& b) {
 	// result = first column of B x first row of A
 	result.val[0] = vmulq_lane_f32(b.val[0], vget_low_f32(a.val[0]), 0);
 	result.val[1] = vmulq_lane_f32(b.val[0], vget_low_f32(a.val[1]), 0);
@@ -63,4 +65,6 @@ ARMV7_FUNC_API void mat44_multiply(float32x4x4_t& result, const float32x4x4_t& a
 	);
 #endif
 }
+
+} // ARM7_FUNC_NAMESPACE
 
